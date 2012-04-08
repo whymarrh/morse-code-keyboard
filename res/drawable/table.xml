@@ -1,0 +1,9 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+  <solid android:color="@color/border_color" />
+  <padding
+    android:left="@dimen/border_width"
+    android:top="@dimen/border_width"
+    android:right="@dimen/border_width"
+    android:bottom="@dimen/border_width"
+  />
+</shape>

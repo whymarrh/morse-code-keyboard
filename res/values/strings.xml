@@ -1,0 +1,5 @@
+<resources>
+  <string name="ime_name">Morse Code</string>
+  <string name="ime_reference">International Morse Code</string>
+  <string name="ime_preferences">Morse Code Settings</string>
+</resources>

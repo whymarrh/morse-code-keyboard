@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="Mcime" default="help">
+  <property file="local.properties" />
+  <property file="ant.properties" />
+  <loadproperties srcFile="project.properties" />
+  <fail
+    message="sdk.dir is missing."
+    unless="sdk.dir"
+    />
+  <import file="custom_rules.xml" optional="true" />
+  <!-- version-tag: 1 -->
+  <import file="${sdk.dir}/tools/ant/build.xml" />
+</project>

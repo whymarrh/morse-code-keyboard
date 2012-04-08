@@ -1,0 +1,6 @@
+.DS_Store
+*.sh
+bin/
+gen/
+insp/
+local.properties

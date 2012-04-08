@@ -1,0 +1,48 @@
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory
+    android:title="Preferences">
+    <CheckBoxPreference
+      android:key="auto_punct"
+      android:title="Auto-punctuate"
+      android:summary="Press the spacebar twice to insert &quot;.&quot;"
+      />
+    <CheckBoxPreference
+      android:key="auto_caps"
+      android:title="Auto-capitalization"
+      android:summary="Capitalize the first word of sentences"
+      />
+    <CheckBoxPreference
+      android:key="allow_vibrate"
+      android:title="Haptic feedback"
+      android:summary="Vibrate on key presses"
+      />
+  </PreferenceCategory>
+  <PreferenceCategory
+    android:title="Help &amp; About">
+    <PreferenceScreen
+      android:title="Morse Code"
+      android:summary="Morse code on Wikipedia">
+      <intent
+        android:action="android.intent.action.VIEW"
+        android:data="http://en.m.wikipedia.org/wiki/Morse_code"
+        />
+    </PreferenceScreen>
+    <PreferenceScreen
+      android:title="Gmail Tap"
+      android:summary="The inspiration from whence this came">
+      <intent
+        android:action="android.intent.action.VIEW"
+        android:data="vnd.youtube:1KhZKNZO8mQ"
+        />
+    </PreferenceScreen>
+    <PreferenceScreen
+      android:title="Do you haz teh codez?"
+      android:summary="View the complete source code online">
+      <intent
+        android:action="android.intent.action.VIEW"
+        android:data="https://github.com/whymarrh/MorseCodeIME"
+        />
+    </PreferenceScreen>
+  </PreferenceCategory>
+</PreferenceScreen>
