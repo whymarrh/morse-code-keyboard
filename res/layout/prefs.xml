@@ -41,7 +41,7 @@
       android:summary="View the complete source code online">
       <intent
         android:action="android.intent.action.VIEW"
-        android:data="https://github.com/whymarrh/MorseCodeIME"
+        android:data="https://github.com/whymarrh/mcime"
         />
     </PreferenceScreen>
   </PreferenceCategory>
