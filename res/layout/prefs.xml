@@ -17,6 +17,11 @@
       android:title="Haptic feedback"
       android:summary="Vibrate on key presses"
       />
+    <CheckBoxPreference
+      android:key="show_help"
+      android:title="Display guide"
+      android:summary="Swipe up on the keyboard to show guide"
+      />
   </PreferenceCategory>
   <PreferenceCategory
     android:title="Help &amp; About">
@@ -33,7 +38,15 @@
       android:summary="The inspiration from whence this came">
       <intent
         android:action="android.intent.action.VIEW"
-        android:data="vnd.youtube:1KhZKNZO8mQ"
+        android:data="vnd.youtube://1KhZKNZO8mQ"
+        />
+    </PreferenceScreen>
+    <PreferenceScreen
+      android:title="About Gmail Tap"
+      android:summary="The inspiration from whence this came">
+      <intent
+        android:action="android.intent.action.VIEW"
+        android:data="vnd.youtube://Je7Xq9tdCJc"
         />
     </PreferenceScreen>
     <PreferenceScreen

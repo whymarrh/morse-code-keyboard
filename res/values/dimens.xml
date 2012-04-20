@@ -1,5 +1,6 @@
 <resources>
   <dimen name="fade">5dip</dimen>
+  <dimen name="scroll_padding">5dip</dimen>
   <dimen name="no_cell_padding">0dip</dimen>
   <dimen name="cell_padding">10dip</dimen>
   <dimen name="border_width">1dip</dimen>

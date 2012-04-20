@@ -32,6 +32,7 @@ public class MorseCodeIME extends InputMethodService implements OnKeyboardAction
   private Vibrator vib = null;
   private boolean shifted = false;
   private boolean capsLocked = false;
+  private boolean showReference = false;
   private MorseCodeKeyboard morseCodeKeyboard = null;
   private MorseCodeKeyboardView morseCodeKeyboardView = null;
 
@@ -53,6 +54,7 @@ public class MorseCodeIME extends InputMethodService implements OnKeyboardAction
     vibrationEnabled = prefs.getBoolean("allow_vibrate", false);
     autoPunctuate = prefs.getBoolean("auto_punct", false);
     autoCapitalize = prefs.getBoolean("auto_caps", false);
+    showReference = prefs.getBoolean("show_help", false);
     text.setLength(0);
     initShift(autoCapitalize);
   }
@@ -87,10 +89,12 @@ public class MorseCodeIME extends InputMethodService implements OnKeyboardAction
     handleClose();
   }
   @Override public void swipeUp() {
-    handleClose();
-    Intent i = new Intent(this, Reference.class);
-    i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-    startActivity(i);
+    if (showReference) {
+      handleClose();
+      Intent i = new Intent(this, Reference.class);
+      i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+      startActivity(i);
+    }
   }
   @Override public void swipeLeft() {
   }
