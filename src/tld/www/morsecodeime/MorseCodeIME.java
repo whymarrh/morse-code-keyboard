@@ -1,4 +1,4 @@
-package tld.whitby.whymarrh.morsecodeime;
+package tld.www.morsecodeime;
 
 import java.lang.String;
 import java.lang.StringBuilder;

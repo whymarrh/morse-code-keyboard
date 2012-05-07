@@ -1,4 +1,4 @@
-package tld.whitby.whymarrh.morsecodeime;
+package tld.www.morsecodeime;
 
 import java.lang.CharSequence;
 import android.content.Context;

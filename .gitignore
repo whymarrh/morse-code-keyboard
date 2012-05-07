@@ -2,5 +2,5 @@
 *.sh
 bin/
 gen/
-insp/
+inspiration/
 local.properties

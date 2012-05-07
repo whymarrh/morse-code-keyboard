@@ -1,4 +1,4 @@
-package tld.whitby.whymarrh.morsecodeime;
+package tld.www.morsecodeime;
 
 import android.graphics.Color;
 import android.os.Bundle;
