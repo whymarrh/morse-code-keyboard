@@ -14,7 +14,7 @@ But while Google was joking, I am using this keyboard very happily; using the In
 
 |Character|Code|Character|Code|
 |:-------:|:--:|:-------:|:--:|
-|A|**&middot;&nbsp;--**|N|**--&nbsp;&middot;**|
+|A|**&middot;&nbsp;-**|N|**--&nbsp;&middot;**|
 |B|**--&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;**|O|**--&nbsp;--&nbsp;--**|
 |C|**--&nbsp;&middot;&nbsp;--&nbsp;&middot;&nbsp;**|P|**&nbsp;&middot;&nbsp;--&nbsp;--&nbsp;&middot;**|
 |D|**--&nbsp;&middot;&nbsp;&middot;&nbsp;**|Q|**--&nbsp;--&nbsp;&middot;&nbsp;--**|

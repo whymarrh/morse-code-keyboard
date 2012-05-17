@@ -77,11 +77,11 @@ public class MorseCodeIME extends InputMethodService implements OnKeyboardAction
         break;
       default: break;
     }
-    if (vibrationEnabled) vib.vibrate(VIBRATE_LENGTH);
   }
   @Override public void onRelease(int primaryCode) {
   }
   @Override public void onPress(int primaryCode) {
+    if (vibrationEnabled) vib.vibrate(VIBRATE_LENGTH);
   }
   @Override public void onText(CharSequence text) {
   }
