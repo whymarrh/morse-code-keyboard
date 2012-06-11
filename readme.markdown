@@ -1,6 +1,6 @@
 # What it is #
 
-The **Morse Code Soft Keyboard** or **Morse Code Input Method Editor (MCIME)** is a soft keyboard for Android phones and tablets that replaces the default keyboard with one that only has two buttons -- a dot and a dash. Many thanks to Google for sharing [this great idea][Gmail Tap] on April Fool's day.
+**Morse code Input Method Editor (MCIME)** is a soft keyboard for Android phones and tablets that replaces the default keyboard with one that only has two buttons -- a dot and a dash. Many thanks to Google for sharing [this great idea][Gmail Tap] on April Fool's day 2012.
 
 > You can tap it in the morning,  
 > You can tap it at night,  
@@ -10,7 +10,7 @@ The **Morse Code Soft Keyboard** or **Morse Code Input Method Editor (MCIME)** i
 
 This is cool because, as mentioned in the [Gmail Tap] video, people (like myself) with larger fingers, can type without error. As well, the fact that 26 keys have been reduced down to two impresses many.
 
-But while Google was joking, I am using this keyboard very happily; using the International Morse Code to input text:
+But while Google was joking, I am using this keyboard very happily; using the International Morse code to input text:
 
 |Character|Code|Character|Code|
 |:-------:|:--:|:-------:|:--:|
@@ -53,23 +53,31 @@ Plus some extra codes for digits and common punctuation:
 
 To build from this source, Ant, the JDK, and the Android SDK are all required. (It's just like building any other Android app.) **I am assuming you have your phone connected via [ADB][3], and have the SDK preconfigured.**
 
-1. Download a [tarball][2] or a [zipball][1] of the source.
+1. Download a [tarball][2] or [zipball][1] of the source.
 2. Unpack the archive to any location of your choosing, e.g. `/tmp/`.
 3. Change into said directory via `cd`.
 3. `android update project -p .` to create the local properties file.
-4. Run `ant debug > /dev/null` to create the packages.
+4. Run `ant debug` to create the packages.
 5. `adb -d install ./bin/MorseCodeKeyboard-debug.apk` will install to the connected physical device.
 
-Once the `.apk` file has been installed, open *Settings > Language and Keyboard* on your device. Select the checkbox beside Morse Code and accept the warning. Select the *Input Method* preference option and choose *Morse Code* to change to the new keyboard. All done. **It will take some getting used to, but Morse Code is super cool, trust me.**
+Once the `.apk` file has been installed, open *Settings > Language and Keyboard* on your device. Select the checkbox beside *Morse code* and accept the warning. Select the *Input Method* preference option and choose *Morse code* to change to the new keyboard. All done. **It will take some getting used to, but Morse code is super cool, trust me.**
 
 # Installing without building #
 
-To install the Morse Code Keyboard using the included `.apk` file, first ensure that *Unknown Sources* is selected from the *Settings > Application* menu. This will allow you to install packages not from the Android Market (Google Play).
+To install the Morse code keyboard using the included `.apk` file, first ensure that *Unknown Sources* is selected from the *Settings > Application* menu. This will allow you to install packages not from the Android Market (Google Play).
 
-1. [Download the package][4] from your device.
+1. [Download the package][4] from your Android device.
 2. Open the downloaded package, and choose install.
 
-Once the `.apk` file has been installed, open *Settings > Language and Keyboard* on your device. Select the checkbox beside Morse Code and accept the warning. Select the *Input Method* preference option and choose *Morse Code* to change to the new keyboard. All done. **It will take some getting used to, but Morse Code is super cool, trust me.**
+Once the `.apk` file has been installed, open *Settings > Language and Keyboard* on your device. Select the checkbox beside Morse code and accept the warning. Select the *Input Method* preference option and choose *Morse code* to change to the new keyboard. All done. **It will take some getting used to, but Morse code is super cool, trust me.**
+
+# The behaviour of the  delete (DEL) key #
+
+The delete key behaviour may seem a bit weird at first. What it does is this: if you enter a sequence of dots and dashes and then press delete, it will undo all of what was just entered (the dots/dashes a.k.a the composing text), not just the last character. **It deletes the whole sequence that was entered, not just the last dot/dash and not the previous character.** In the event that no sequence was entered and you press the delete key, it will then delete the previous character. I feel that this becomes intuitive after a bit of use. You may disagree; I may add an alternative behaviour as preference in the future.
+
+# What I've realized about design #
+
+I'm not a designer, nor am I knowledgeable in UX in any way. Regardless, I have noted that many an app don't do forms correctly. When entering text into a text field with the intention of "submitting" it, give the user a submit button of some sort. The assumption cannot be made that the input method that the user is using has a "done" or "submit" key. Case-in-point: this keyboard does not have such a button.
 
   [1]:https://github.com/whymarrh/mcime/zipball/master
   [2]:https://github.com/whymarrh/mcime/tarball/master

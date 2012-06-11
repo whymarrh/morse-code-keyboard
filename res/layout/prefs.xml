@@ -22,11 +22,16 @@
       android:title="Display guide"
       android:summary="Swipe up on the keyboard to show guide"
       />
+    <CheckBoxPreference
+      android:key="swipe_close"
+      android:title="Swipe to close"
+      android:summary="Swipe down on the keyboard to exit"
+      />
   </PreferenceCategory>
   <PreferenceCategory
     android:title="Help &amp; About">
     <PreferenceScreen
-      android:title="Morse Code"
+      android:title="Morse code"
       android:summary="Morse code on Wikipedia">
       <intent
         android:action="android.intent.action.VIEW"
@@ -34,7 +39,7 @@
         />
     </PreferenceScreen>
     <PreferenceScreen
-      android:title="Gmail Tap"
+      android:title="Introducing Gmail Tap"
       android:summary="The inspiration from whence this came">
       <intent
         android:action="android.intent.action.VIEW"
@@ -50,8 +55,8 @@
         />
     </PreferenceScreen>
     <PreferenceScreen
-      android:title="Do you haz teh codez?"
-      android:summary="View the complete source code online">
+      android:title="Source code"
+      android:summary="View the complete source code online via GitHub">
       <intent
         android:action="android.intent.action.VIEW"
         android:data="https://github.com/whymarrh/mcime"

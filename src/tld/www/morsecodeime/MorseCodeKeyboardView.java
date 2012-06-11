@@ -11,6 +11,8 @@ import android.inputmethodservice.Keyboard.Key;
 import android.inputmethodservice.KeyboardView;
 
 public class MorseCodeKeyboardView extends KeyboardView {
+  // these three constants are manually mirrored in the
+  // MorseCodeIME class
   private final int SHIFT_OFF = 0;
   private final int SHIFT_ON = 1;
   private final int SHIFT_CAPS = 2;

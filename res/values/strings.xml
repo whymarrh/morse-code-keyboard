@@ -1,5 +1,5 @@
 <resources>
-  <string name="ime_name">Morse Code</string>
-  <string name="ime_reference">International Morse Code</string>
-  <string name="ime_preferences">Morse Code Settings</string>
+  <string name="ime_name">Morse code</string>
+  <string name="ime_reference">International Morse code</string>
+  <string name="ime_preferences">Morse code settings</string>
 </resources>
