@@ -1,6 +1,6 @@
 # What it is #
 
-The Morse code input method editor (there is an acronym for that) is a soft keyboard for Android phones and tablets that replaces the default stock keyboard with one that only has two buttons -- a dot and a dash. Many thanks to Google for sharing this great idea as [Gmail Tap] on April Fool's day 2012.
+The Morse code input method editor (there's an acronym for that) is a soft keyboard for Android phones and tablets that replaces the default stock keyboard with one that only has two buttons -- a dot and a dash. Many thanks to Google for sharing this great idea as [Gmail Tap] on April Fool's day 2012.
 
   [Gmail Tap]:http://www.youtube.com/watch?v=1KhZKNZO8mQ
 
