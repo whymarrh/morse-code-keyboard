@@ -1,6 +1,6 @@
 # What it is #
 
-The Morse code input method editor (there's an acronym for that) is a soft keyboard for Android phones and tablets that replaces the default stock keyboard with one that only has two buttons -- a dot and a dash. Many thanks to Google for sharing this great idea as [Gmail Tap] on April Fool's day 2012.
+The Morse code input method editor (there's an acronym for that) is a soft keyboard for Android phones that replaces the default stock keyboard with one that only has two buttons -- a dot and a dash. Many thanks to Google for sharing this great idea as [Gmail Tap] on April Fool's day 2012.
 
   [Gmail Tap]:http://www.youtube.com/watch?v=1KhZKNZO8mQ
 
@@ -12,9 +12,9 @@ The Morse code input method editor (there's an acronym for that) is a soft keybo
 
 This is super cool because, as mentioned in the Gmail Tap video, people (like myself) with larger fingers, can type quickly without error. Also, the fact that 26 keys have been reduced down to two impresses many.
 
-![Screenshot](https://github.com/whymarrh/mcime/raw/master/screenshot.png)
+![Screenshot](screenshot.png)
 
-But while Google was joking, I am using this keyboard very happily; using International Morse code to input text:
+But while Google was joking, I am using this keyboard very happily; using International Morse code to input text,
 
 |Character|Code|Character|Code|
 |:-------:|:--:|:-------:|:--:|
@@ -32,7 +32,7 @@ But while Google was joking, I am using this keyboard very happily; using Intern
 |L|**&nbsp;&middot;&nbsp;--&nbsp;&middot;&nbsp;&middot;**|Y|**--&nbsp;&middot;&nbsp;--&nbsp;--**|
 |M|**--&nbsp;--**|Z|**--&nbsp;--&nbsp;&middot;&nbsp;&middot;**|
 
-Plus some extra codes for digits and common punctuation:
+Plus some extra codes for digits and common punctuation,
 
 |Character|Code|Character|Code|
 |:-------:|:--:|:-------:|:--:|
@@ -46,10 +46,15 @@ Plus some extra codes for digits and common punctuation:
 |8|**&nbsp;--&nbsp;--&nbsp;--&nbsp;&middot;&nbsp;&middot;**|)|**&nbsp;--&nbsp;&middot;&nbsp;--&nbsp;--&nbsp;&middot;&nbsp;--**|
 |9|**&nbsp;--&nbsp;--&nbsp;--&nbsp;--&nbsp;&middot;**|&amp;|**&nbsp;&middot;&nbsp;--&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;**|
 |0|**&nbsp;--&nbsp;--&nbsp;--&nbsp;--&nbsp;--**|:|**&nbsp;--&nbsp;--&nbsp;--&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;**|
-|;|**&nbsp;--&nbsp;&middot;&nbsp;--&nbsp;&middot;&nbsp;--**|=|**&nbsp;--&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;--**|
-|+|**&nbsp;&middot;&nbsp;--&nbsp;&middot;&nbsp;--&nbsp;&middot;**|-|**&nbsp;--&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;--**|
+|;|**&nbsp;--&nbsp;&middot;&nbsp;--&nbsp;&middot;&nbsp;--**|-|**&nbsp;--&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;--**|
 |_|**&nbsp;&middot;&nbsp;&middot;&nbsp;--&nbsp;--&nbsp;&middot;&nbsp;--**|\\|**&nbsp;&middot;&nbsp;--&nbsp;&middot;&nbsp;&middot;&nbsp;--&nbsp;&middot;**|
 |$|**&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;--&nbsp;&middot;&nbsp;&middot;&nbsp;--**|@|**&nbsp;&middot;&nbsp;--&nbsp;--&nbsp;&middot;&nbsp;--&nbsp;&middot;**|
+
+And two [procedural signals][5],
+
+|Code|Meaning|Code|Meaning|
+|:--:|:-----:|:--:|:-----:|
+|**&nbsp;&middot;&nbsp;--&nbsp;&middot;&nbsp;--**|Newline|**&nbsp;&middot;&nbsp;--&nbsp;&middot;&nbsp;--&nbsp;&middot;**|End-of-transmisson (EOT)|
 
 # Building and installing #
 
@@ -81,3 +86,4 @@ The delete key behaviour may seem a bit weird at first. What it does is this: if
   [2]:https://github.com/whymarrh/mcime/tarball/master
   [3]:http://developer.android.com/guide/developing/tools/adb.html
   [4]:https://raw.github.com/whymarrh/mcime/master/apk/MorseCodeKeyboard.apk
+  [5]:http://en.wikipedia.org/wiki/Prosigns_for_Morse_code
