@@ -12,7 +12,7 @@ The Morse code input method editor (there's an acronym for that) is a soft keybo
 
 This is super cool because, as mentioned in the Gmail Tap video, people (like myself) with larger fingers, can type quickly without error. Also, the fact that 26 keys have been reduced down to two impresses many.
 
-![Screenshot](screenshot.png)
+![Screenshot](https://github.com/whymarrh/mcime/raw/master/screenshot.png)
 
 But while Google was joking, I am using this keyboard very happily; using International Morse code to input text,
 
