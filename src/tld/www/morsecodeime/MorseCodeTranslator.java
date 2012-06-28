@@ -61,17 +61,19 @@ class MorseCodeTranslator extends Object {
     codes.put(".-...", "&");
     codes.put("---...", ":");
     codes.put("-.-.-.", ";");
-    codes.put("-...-", "=");
-    codes.put(".-.-.", "+");
     codes.put("-....-", "-");
     codes.put("..--.-", "_");
     codes.put(".-..-.", "\"");
     codes.put("...-..-", "$");
     codes.put(".--.-.", "@");
+
+    // prosigns, or procedural signs
+    codes.put(".-.-.", "EOT");
+    codes.put(".-.-", "Newline");
   }
   public String fromMorse(String s, boolean uppercase) {
     for (Map.Entry<String, String> entry : codes.entrySet()) {
-      if (s.equalsIgnoreCase(entry.getKey()))
+      if (s.equals(entry.getKey()))
         return (uppercase) ? entry.getValue().toUpperCase() : entry.getValue();
     }
     return "";

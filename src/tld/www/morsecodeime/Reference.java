@@ -24,7 +24,7 @@ public class Reference extends Activity {
       final int cp = (int) res.getDimension(R.dimen.cell_padding);
       final float lw = 0.4f;
       final float rw = 0.6f;
-      final float ts = 16f;
+      final float ts = 18f;
       final boolean first = (index == 0);
       final boolean isAlt = (index % 2 == 0);
       setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
@@ -45,7 +45,7 @@ public class Reference extends Activity {
         t.setTextSize(TypedValue.COMPLEX_UNIT_DIP, ts);
         t.setTypeface(Typeface.create(Typeface.MONOSPACE, Typeface.BOLD));
         t.setTextColor(res.getColor(R.color.left_cell_text));
-        t.setBackgroundResource(R.color.left_cell_bg);
+        t.setBackgroundResource((isAlt) ? R.color.left_cell_bg_alt : R.color.left_cell_bg);
         t.setGravity(gravity);
         addView(t);
       }{
@@ -79,6 +79,7 @@ public class Reference extends Activity {
     tbl = (TableLayout) findViewById(R.id.tbl);
     int count = 0;
     for (Map.Entry<String, String> e : translator.codes.entrySet())
+      // if (e.getValue().length() == 1) // this avoid adding prosigns to the reference
       tbl.addView(new Row(this, e.getValue().toUpperCase(), e.getKey(), count++));
   }
 }

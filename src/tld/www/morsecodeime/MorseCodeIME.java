@@ -133,31 +133,59 @@ public class MorseCodeIME extends InputMethodService implements OnKeyboardAction
   }
   @Override public void swipeRight() {
   }
+  /*
+   * Commits the composed text (i.e. the dots and dashes
+   * that make up a letter or prosign) to the current input
+   * connection.
+   * @param uppercase whether the character represented should be commited as uppercase or lowercase.
+   */
   private void commitText(boolean uppercase) {
     if (text.length() <= 0) return;
     InputConnection ic = getCurrentInputConnection();
-    ic.commitText(translator.fromMorse(text.toString(), uppercase), /* new cursor pos */ 1);
+    // check for prosigns first and foremost
+    if (translator.fromMorse(text.toString(), false) == "Newline") {
+      ic.sendKeyEvent( new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_ENTER) );
+    }
+    else if (translator.fromMorse(text.toString(), false) == "EOT") {
+      // perform the editor action as determined by the editor itself
+      ic.performEditorAction(EditorInfo.IME_MASK_ACTION | EditorInfo.IME_FLAG_NO_ENTER_ACTION);
+    }
+    else {
+      // if the composed dots and dashed do not represent a procedural signal
+      ic.commitText(translator.fromMorse(text.toString(), uppercase), /* new cursor pos */ 1);
+    }
     text.setLength(0);
   }
+  /*
+   * Commits the passed text to the text box and reset the
+   * cursor position. Used to commit a predetermined string of
+   * text instead of something the user is composing.
+   * @param s the text to commit
+   */
   private void commitText(String s) {
     InputConnection ic = getCurrentInputConnection();
-    ic.commitText(s, 0);
+    ic.commitText(s, /* new cursor pos */1);
     text.setLength(0);
   }
+  /*
+   * Handle the closing of this IME.
+   */
   private void handleClose() {
     requestHideSelf(0);
     morseCodeKeyboardView.closing();
   }
+  /*
+   * Handle the backspace action.
+   */
   private void handleBackspace() {
     if (text.length() == 0) {
+      // delete the letter to the left of the cursor position
       getCurrentInputConnection().sendKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_DEL));
     }
     text.setLength(0);
-    if (autoCapitalize) {
-      // if there is no text before (i.e the field is empty) reset the shift
-      initShift(getCurrentInputConnection().getTextBeforeCursor(1, /* flags */ 0).length() != 1);
+    if (!capsLocked && autoCapitalize) {
+     initShift(getCurrentInputConnection().getTextBeforeCursor(1, /* flags */ 0).length() != 1);
     }
-    else initShift(false);
   }
   private void handleSpace() {
     if (text.length() == 0) {
@@ -202,7 +230,10 @@ public class MorseCodeIME extends InputMethodService implements OnKeyboardAction
     capsLocked = false;
     if (null != morseCodeKeyboardView) morseCodeKeyboardView.setShifted((shifted) ? SHIFT_ON : SHIFT_OFF);
   }
-  // toast a message - used for simple debugging
+  /*
+   * Shows a simple toast message for debugging
+   * @param msg the debug message to show
+   */
   private void toastMsg(String msg) {
     Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
   }
