@@ -1,5 +1,4 @@
 .DS_Store
-*.sh
 bin/
 gen/
 inspiration/
