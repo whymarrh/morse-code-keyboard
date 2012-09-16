@@ -32,7 +32,7 @@
     android:title="Help &amp; About">
     <PreferenceScreen
       android:title="Morse code"
-      android:summary="Morse code on Wikipedia">
+      android:summary="Morse code article on Wikipedia">
       <intent
         android:action="android.intent.action.VIEW"
         android:data="http://en.m.wikipedia.org/wiki/Morse_code"
