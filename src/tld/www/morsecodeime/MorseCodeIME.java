@@ -127,7 +127,7 @@ public class MorseCodeIME extends InputMethodService implements OnKeyboardAction
   }
   /*
     swipeLeft and swipeRight are two gestures not
-    really required, but can be used maybe in the future
+    really required, may be used in the future
   */
   @Override public void swipeLeft() {
   }
