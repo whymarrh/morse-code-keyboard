@@ -1,5 +1,24 @@
 <resources>
-  <string name="ime_name">Morse code</string>
-  <string name="ime_reference">International Morse code</string>
-  <string name="ime_preferences">Morse code settings</string>
+	<string name="ime_name">Morse code</string>
+	<string name="ime_reference">International Morse code</string>
+	<string name="ime_preferences">Morse code settings</string>
+	<string name="preferences">Preferences</string>
+	<string name="auto_punct">Auto-punctuate</string>
+	<string name="auto_punct_details">Press the spacebar twice to insert &quot;.&quot;</string>
+	<string name="auto_caps">Auto-capitalization</string>
+	<string name="auto_caps_details">Capitalize the first word of sentences</string>
+	<string name="allow_vibrate">Haptic feedback</string>
+	<string name="allow_vibrate_details">Vibrate on key presses</string>
+	<string name="show_help">Display guide</string>
+	<string name="show_help_details">Swipe up on the keyboard to show guide</string>
+	<string name="swipe_close">Swipe to close</string>
+	<string name="swipe_close_details">Swipe down on the keyboard to exit</string>
+	<string name="help_about">Help &amp; About</string>
+	<string name="morse_code">Morse code</string>
+	<string name="wikipedia">Morse code article on Wikipedia</string>
+	<string name="introducing_gmail_tap">Introducing Gmail Tap</string>
+	<string name="about_gmail_tap">About Gmail Tap</string>
+	<string name="inspiration">The inspiration from whence this came</string>
+	<string name="source_code">Source code</string>
+	<string name="source_code_details">View the source code online via GitHub</string>
 </resources>

@@ -1,18 +1,18 @@
 <resources>
-  <color name="white">#ffffff</color>
-  <color name="black">#000000</color>
-  <color name="beige">#eaeaea</color>
 
-  <!-- left cells -->
-  <color name="left_cell_text">#333333</color>
-  <color name="left_cell_bg">#f5f5f5</color>
-  <color name="left_cell_bg_alt">#f9f9f9</color>
-  <!-- rights cells -->
-  <color name="right_cell_text">#333333</color>
-  <color name="right_cell_bg">#f5f5f5</color>
-  <color name="right_cell_bg_alt">#f9f9f9</color>
+	<color name="white">#ffffff</color>
+	<color name="black">#000000</color>
+	<color name="beige">#eaeaea</color>
 
-  <color name="border_color">#ebebeb</color>
-  <style name="preferences" parent="android:Theme.Light">
-  </style>
+	<color name="left_cell_text">#333333</color>
+	<color name="left_cell_bg">#f5f5f5</color>
+	<color name="left_cell_bg_alt">#f9f9f9</color>
+
+	<color name="right_cell_text">#333333</color>
+	<color name="right_cell_bg">#f5f5f5</color>
+	<color name="right_cell_bg_alt">#f9f9f9</color>
+
+	<color name="border_color">#ebebeb</color>
+	<style name="preferences" parent="android:Theme.Light"></style>
+
 </resources>

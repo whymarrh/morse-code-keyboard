@@ -1,21 +1,21 @@
-# What it is #
-
 The [Morse code] input method editor (there's an acronym for that) is a soft keyboard for Android phones that replaces the default stock keyboard with one that only has two buttons -- a dot and a dash. Many thanks to Google for sharing this great idea as [Gmail Tap] on April Fool's day 2012.
 
-  [Morse code]:http://en.wikipedia.org/wiki/Morse_code
+  [Morse code]:https://en.wikipedia.org/wiki/Morse_code
   [Gmail Tap]:http://www.youtube.com/watch?v=1KhZKNZO8mQ
 
 > You can tap it in the morning,  
 > You can tap it at night,  
 > You can tap in the bathroom,  
 > It's a dot and a dash to have a conversation with the whole world.  
-> -- Todd Smith, Gmail Tap Product Lead
+> - Todd Smith, Gmail Tap Product Lead
 
-This is super cool because, as mentioned in the Gmail Tap video, people (like myself) with larger fingers, can type quickly without error. Also, the fact that 26 keys have been reduced down to two impresses many.
+This is super cool because, as mentioned in the Gmail Tap video, people with larger fingers can now type quickly without error.
+
+(Tested only on the Motorola Atrix.)
 
 ![Screenshot](https://github.com/whymarrh/mcime/raw/master/screenshot.png)
 
-But while Google was joking, I am using this keyboard very happily; using International Morse code to input text,
+International Morse code
 
 |Character|Code|Character|Code|
 |:-------:|:--:|:-------:|:--:|
@@ -33,7 +33,7 @@ But while Google was joking, I am using this keyboard very happily; using Intern
 |L|**&nbsp;&middot;&nbsp;--&nbsp;&middot;&nbsp;&middot;**|Y|**--&nbsp;&middot;&nbsp;--&nbsp;--**|
 |M|**--&nbsp;--**|Z|**--&nbsp;--&nbsp;&middot;&nbsp;&middot;**|
 
-Plus some extra codes for digits and common punctuation,
+Plus some extra codes for digits and common punctuation
 
 |Character|Code|Character|Code|
 |:-------:|:--:|:-------:|:--:|
@@ -51,7 +51,7 @@ Plus some extra codes for digits and common punctuation,
 |_|**&nbsp;&middot;&nbsp;&middot;&nbsp;--&nbsp;--&nbsp;&middot;&nbsp;--**|\\|**&nbsp;&middot;&nbsp;--&nbsp;&middot;&nbsp;&middot;&nbsp;--&nbsp;&middot;**|
 |$|**&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;--&nbsp;&middot;&nbsp;&middot;&nbsp;--**|@|**&nbsp;&middot;&nbsp;--&nbsp;--&nbsp;&middot;&nbsp;--&nbsp;&middot;**|
 
-And two [procedural signals][5],
+And two [procedural signals][5]
 
 |Code|Meaning|Code|Meaning|
 |:--:|:-----:|:--:|:-----:|
@@ -61,23 +61,11 @@ And two [procedural signals][5],
 
 To build from this source, Ant, the JDK, and the Android SDK are all required. (It's just like building any other Android app.) **I am assuming you have your phone connected via [ADB][3], and have the SDK preconfigured.**
 
-1. Download a [tarball][2] or [zipball][1] of the source.
-2. Unpack the archive to any location of your choosing, e.g. `/tmp/`.
-3. Change into said directory via `cd`.
-3. `android update project -p .` to create the local properties file.
-4. Run `ant debug` to create the packages.
-5. `adb -d install ./bin/MorseCodeKeyboard-debug.apk` will install to the connected physical device.
+1. `android update project -p .` to create the local properties file.
+2. Run `ant debug` to create the packages.
+3. `adb -d install ./bin/MorseCodeKeyboard-debug.apk` will install to the connected physical device.
 
 Once the `.apk` file has been installed, open *Settings > Language and Keyboard* on your device. Select the checkbox beside *Morse code* and accept the warning. Select the *Input Method* preference option and choose *Morse code* to change to the new keyboard. All done.
-
-# Installing without building #
-
-To install the Morse code keyboard using the included `.apk` file, first ensure that *Unknown Sources* is selected from the *Settings > Application* menu. This will allow you to install packages not from the Android Market (Google Play).
-
-1. [Download the package][4] from your Android device.
-2. Open the downloaded package, and choose install.
-
-Once the `.apk` file has been installed, open *Settings > Language and Keyboard* on your device. Select the checkbox beside Morse code and accept the warning. Select the *Input Method* preference option and choose *Morse code* to change to the new keyboard. All done.
 
 # The behaviour of the  delete (DEL) key #
 

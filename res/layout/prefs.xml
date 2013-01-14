@@ -1,66 +1,69 @@
 <PreferenceScreen
-  xmlns:android="http://schemas.android.com/apk/res/android">
-  <PreferenceCategory
-    android:title="Preferences">
-    <CheckBoxPreference
-      android:key="auto_punct"
-      android:title="Auto-punctuate"
-      android:summary="Press the spacebar twice to insert &quot;.&quot;"
-      />
-    <CheckBoxPreference
-      android:key="auto_caps"
-      android:title="Auto-capitalization"
-      android:summary="Capitalize the first word of sentences"
-      />
-    <CheckBoxPreference
-      android:key="allow_vibrate"
-      android:title="Haptic feedback"
-      android:summary="Vibrate on key presses"
-      />
-    <CheckBoxPreference
-      android:key="show_help"
-      android:title="Display guide"
-      android:summary="Swipe up on the keyboard to show guide"
-      />
-    <CheckBoxPreference
-      android:key="swipe_close"
-      android:title="Swipe to close"
-      android:summary="Swipe down on the keyboard to exit"
-      />
-  </PreferenceCategory>
-  <PreferenceCategory
-    android:title="Help &amp; About">
-    <PreferenceScreen
-      android:title="Morse code"
-      android:summary="Morse code article on Wikipedia">
-      <intent
-        android:action="android.intent.action.VIEW"
-        android:data="http://en.m.wikipedia.org/wiki/Morse_code"
-        />
-    </PreferenceScreen>
-    <PreferenceScreen
-      android:title="Introducing Gmail Tap"
-      android:summary="The inspiration from whence this came">
-      <intent
-        android:action="android.intent.action.VIEW"
-        android:data="vnd.youtube://1KhZKNZO8mQ"
-        />
-    </PreferenceScreen>
-    <PreferenceScreen
-      android:title="About Gmail Tap"
-      android:summary="The inspiration from whence this came">
-      <intent
-        android:action="android.intent.action.VIEW"
-        android:data="vnd.youtube://Je7Xq9tdCJc"
-        />
-    </PreferenceScreen>
-    <PreferenceScreen
-      android:title="Source code"
-      android:summary="View the complete source code online via GitHub">
-      <intent
-        android:action="android.intent.action.VIEW"
-        android:data="https://github.com/whymarrh/mcime"
-        />
-    </PreferenceScreen>
-  </PreferenceCategory>
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<PreferenceCategory
+		android:title="@string/preferences">
+		<CheckBoxPreference
+			android:key="auto_punct"
+			android:title="@string/auto_punct"
+			android:summary="@string/auto_punct_details"
+		/>
+		<CheckBoxPreference
+			android:key="auto_caps"
+			android:title="@string/auto_caps"
+			android:summary="@string/auto_caps_details"
+		/>
+		<CheckBoxPreference
+			android:key="allow_vibrate"
+			android:title="@string/allow_vibrate"
+			android:summary="@string/allow_vibrate_details"
+		/>
+		<CheckBoxPreference
+			android:key="show_help"
+			android:title="@string/show_help"
+			android:summary="@string/show_help_details"
+		/>
+		<CheckBoxPreference
+			android:key="swipe_close"
+			android:title="@string/swipe_close"
+			android:summary="@string/swipe_close_details"
+		/>
+	</PreferenceCategory>
+
+	<PreferenceCategory
+		android:title="@string/help_about">
+		<PreferenceScreen
+			android:title="@string/morse_code"
+			android:summary="@string/wikipedia">
+			<intent
+				android:action="android.intent.action.VIEW"
+				android:data="https://en.wikipedia.org/wiki/Morse_code"
+			/>
+		</PreferenceScreen>
+		<PreferenceScreen
+			android:title="@string/introducing_gmail_tap"
+			android:summary="@string/inspiration">
+			<intent
+				android:action="android.intent.action.VIEW"
+				android:data="vnd.youtube://1KhZKNZO8mQ"
+			/>
+		</PreferenceScreen>
+		<PreferenceScreen
+			android:title="@string/about_gmail_tap"
+			android:summary="@string/inspiration">
+			<intent
+				android:action="android.intent.action.VIEW"
+				android:data="vnd.youtube://Je7Xq9tdCJc"
+			/>
+		</PreferenceScreen>
+		<PreferenceScreen
+			android:title="@string/source_code"
+			android:summary="@string/source_code_details">
+			<intent
+			android:action="android.intent.action.VIEW"
+			android:data="https://github.com/whymarrh/mcime"
+		/>
+		</PreferenceScreen>
+	</PreferenceCategory>
+
 </PreferenceScreen>
