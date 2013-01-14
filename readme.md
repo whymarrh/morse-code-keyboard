@@ -1,4 +1,4 @@
-The [Morse code] input method editor (there's an acronym for that) is a soft keyboard for Android phones that replaces the default stock keyboard with one that only has two buttons -- a dot and a dash. Many thanks to Google for sharing this great idea as [Gmail Tap] on April Fool's day 2012.
+The [Morse code] input method editor (there's an acronym for that) is a soft keyboard for Android phones that replaces the default stock keyboard with one that only has two buttons - a dot and a dash. Many thanks to Google for sharing this great idea as [Gmail Tap] on April Fool's day 2012.
 
   [Morse code]:https://en.wikipedia.org/wiki/Morse_code
   [Gmail Tap]:http://www.youtube.com/watch?v=1KhZKNZO8mQ
@@ -7,11 +7,11 @@ The [Morse code] input method editor (there's an acronym for that) is a soft key
 > You can tap it at night,  
 > You can tap in the bathroom,  
 > It's a dot and a dash to have a conversation with the whole world.  
-> - Todd Smith, Gmail Tap Product Lead
+> -- Todd Smith, Gmail Tap Product Lead
 
-This is super cool because, as mentioned in the Gmail Tap video, people with larger fingers can now type quickly without error.
+This is very cool because, as mentioned in the Gmail Tap video, people with larger fingers can now type quickly without error.
 
-(Tested only on the Motorola Atrix.)
+(Tested only on a Motorola Atrix.)
 
 ![Screenshot](https://github.com/whymarrh/mcime/raw/master/screenshot.png)
 
@@ -33,7 +33,7 @@ International Morse code
 |L|**&nbsp;&middot;&nbsp;--&nbsp;&middot;&nbsp;&middot;**|Y|**--&nbsp;&middot;&nbsp;--&nbsp;--**|
 |M|**--&nbsp;--**|Z|**--&nbsp;--&nbsp;&middot;&nbsp;&middot;**|
 
-Plus some extra codes for digits and common punctuation
+Extra codes for digits and common punctuation
 
 |Character|Code|Character|Code|
 |:-------:|:--:|:-------:|:--:|
@@ -59,17 +59,17 @@ And two [procedural signals][5]
 
 # Building and installing #
 
-To build from this source, Ant, the JDK, and the Android SDK are all required. (It's just like building any other Android app.) **I am assuming you have your phone connected via [ADB][3], and have the SDK preconfigured.**
+To build from this source, Ant, the JDK, and the Android SDK are all required. (It's just like building any other Android app.)
 
 1. `android update project -p .` to create the local properties file.
-2. Run `ant debug` to create the packages.
+2. Run `ant debug` to create the package.
 3. `adb -d install ./bin/MorseCodeKeyboard-debug.apk` will install to the connected physical device.
 
-Once the `.apk` file has been installed, open *Settings > Language and Keyboard* on your device. Select the checkbox beside *Morse code* and accept the warning. Select the *Input Method* preference option and choose *Morse code* to change to the new keyboard. All done.
+Once the `.apk` file has been installed, open *Settings > Language and Keyboard* on the device. Select the checkbox beside *Morse code* and accept the warning. Select the *Input Method* preference option and choose *Morse code* to change to the new keyboard. All done.
 
 # The behaviour of the  delete (DEL) key #
 
-The delete key behaviour may seem a bit weird at first. What it does is this: if you enter a sequence of dots and dashes and then press delete, it will empty the composing text (as in the dots/dashes), not just the last character. **It deletes the whole sequence that was entered, not just the last dot/dash and not the previous character.** In the event that no sequence was entered and you press the delete key, it will then delete the previous character. I feel that this becomes intuitive after a bit of use. You may disagree; I may add an alternative behaviour as preference in the future.
+The delete key behaviour may seem a bit weird at first. What it does is this: if you enter a sequence of dots and dashes and then press delete, it will empty the composing text (as in the dots/dashes), not just the last character. **It deletes the whole sequence that was entered, not just the last dot/dash.** In the event that no sequence was entered and the delete key is pressed, it will then delete the previous character. This should become intuitive after a bit of use.
 
   [1]:https://github.com/whymarrh/mcime/zipball/master
   [2]:https://github.com/whymarrh/mcime/tarball/master
