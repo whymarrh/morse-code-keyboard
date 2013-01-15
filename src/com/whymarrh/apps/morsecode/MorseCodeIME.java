@@ -1,5 +1,6 @@
 package com.whymarrh.apps.morsecode;
 
+import java.lang.Integer;
 import java.lang.String;
 import java.lang.StringBuilder;
 import java.lang.CharSequence;
@@ -20,7 +21,6 @@ import android.inputmethodservice.InputMethodService;
 
 public class MorseCodeIME extends InputMethodService implements OnKeyboardActionListener {
 
-	private final byte VIBRATE_LENGTH = 40; // milliseconds
 	private final MorseCodeTranslator translator = new MorseCodeTranslator();
 	// these three constants are manually mirrored in the
 	// MorseCodeKeyboardView class
@@ -30,6 +30,7 @@ public class MorseCodeIME extends InputMethodService implements OnKeyboardAction
 
 	private StringBuilder text = new StringBuilder(0);
 	private boolean vibrationEnabled = true;
+	private byte vibrateLength = 40; // milliseconds
 	private boolean autoPunctuate = true;
 	private boolean autoCapitalize = true;
 	private Vibrator vib = null;
@@ -57,6 +58,7 @@ public class MorseCodeIME extends InputMethodService implements OnKeyboardAction
 		// get the user's desired preferences
 		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 		vibrationEnabled = prefs.getBoolean("allow_vibrate", false);
+		vibrateLength = (byte) Integer.parseInt(prefs.getString("vibrate_length", "40"));
 		autoPunctuate = prefs.getBoolean("auto_punct", false);
 		autoCapitalize = prefs.getBoolean("auto_caps", false);
 		showReference = prefs.getBoolean("show_help", false);
@@ -117,7 +119,7 @@ public class MorseCodeIME extends InputMethodService implements OnKeyboardAction
 		// vibrate in onPress, NOT in onKey to avoid continuous
 		// vibration when repeating keys - i.e. DEL and space
 		if (vibrationEnabled) {
-			vib.vibrate(VIBRATE_LENGTH);
+			vib.vibrate(vibrateLength);
 		}
 	}
 	@Override public void onText(CharSequence text) {

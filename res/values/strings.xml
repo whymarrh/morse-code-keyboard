@@ -9,6 +9,8 @@
 	<string name="auto_caps_details">Capitalize the first word of sentences</string>
 	<string name="allow_vibrate">Haptic feedback</string>
 	<string name="allow_vibrate_details">Vibrate on key presses</string>
+	<string name="vibrate_length">Vibration duration</string>
+	<string name="vibrate_length_details">Vibrate constantly for the specified period of time.</string>
 	<string name="show_help">Display guide</string>
 	<string name="show_help_details">Swipe up on the keyboard to show guide</string>
 	<string name="swipe_close">Swipe to close</string>

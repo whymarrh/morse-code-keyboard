@@ -18,6 +18,13 @@
 			android:title="@string/allow_vibrate"
 			android:summary="@string/allow_vibrate_details"
 		/>
+		<EditTextPreference
+			android:key="vibrate_length"
+			android:title="@string/vibrate_length"
+			android:summary="@string/vibrate_length_details"
+			android:maxLength="2"
+			android:numeric="integer"
+		/>
 		<CheckBoxPreference
 			android:key="show_help"
 			android:title="@string/show_help"

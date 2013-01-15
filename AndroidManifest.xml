@@ -2,7 +2,7 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	package="com.whymarrh.apps.morsecode"
 	android:versionCode="1"
-	android:versionName="0.9.4">
+	android:versionName="0.9.5">
 
 	<supports-screens
 		android:smallScreens="false"
