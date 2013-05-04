@@ -66,8 +66,8 @@ Building and installing
 
 To build from source, Ant, the JDK, and the Android SDK are all required.
 
-1. `android update project -p .` to create the local properties file.
-2. Run `ant debug` to create the package.
+1. `android update project -p .`
+2. `ant debug`
 3. `adb -d install ./bin/MorseCodeKeyboard-debug.apk`
 
 Once the `.apk` file has been installed, open *Settings > Language and Keyboard* on the device. Select the checkbox beside *Morse code* and accept the warning. Select the *Input Method* preference option and choose *Morse code* to change to the new keyboard. All done.
